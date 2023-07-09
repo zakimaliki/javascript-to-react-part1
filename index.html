@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>JS to React</title>
+
+  </head>
+  <body>
+    <div id="root"></div>
+    <!-- using js dom  -->
+    <!-- <script type="text/javascript">
+        let container = document.getElementById("root")
+        let header = document.createElement("h1")
+        let contentHeader = document.createTextNode("Hello World 🚀")
+        header.appendChild(contentHeader)
+        container.appendChild(header)   
+    </script> -->
+    <!-- using react dom  -->
+    <script src="https://unpkg.com/react@17/umd/react.development.js"></script>
+    <script src="https://unpkg.com/react-dom@17/umd/react-dom.development.js"></script>
+    <!-- babel for compile jsx -->
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+    <script type="text/jsx">
+    let container = document.getElementById("root")
+      //   error because not js but it is jsx to fix it,
+      //    you have to add babel to your project
+      ReactDOM.render(<h1>Hello World🚀</h1>,container)
+    </script>
+  </body>
+</html>
